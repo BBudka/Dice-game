@@ -1,26 +1,42 @@
-// Тоглогчийн хадгалах хувьсагч
-var activePlayer = 0;
-// Тоглогчдийн цуглуулсан оноог хадгалах хувьсагч
-var scores = [0, 0];
-// Тоглогчийн ээлжиндээ цуглуулж байгаа оноог хадгалах хувьсагч
-var currentScore = 0;
-
-// id gaar elementiig ni oloh
-document.getElementById("");
-// queryselector  ni domoos ynzburiin select nukhtsuliig huleej avch tootsoolol hiideg
-
-// document.getElementById("#score--0").textContent = 0;
-// id geer haij baiga bol # tavih shaardlaga baihgui
-document.querySelector("#score--0").textContent = 0;
-document.querySelector("#score--1").textContent = 0;
-
-document.querySelector("#current--1").textContent = 0;
-document.querySelector("#current--0").textContent = 0;
+var activePlayer;
+var scores;
+var currentScore;
+init();
 var DiceDom = document.querySelector(".dice");
 DiceDom.style.display = "none";
 
 // ямар эвент дээр хариу үйлдэл үзүүлэхгээд байгаа юм бэ?
 // uur gazart ashiglahgui uchir huivsagchid hadgalh shaardlagui
+
+function init() {
+  // Тоглогчийн хадгалах хувьсагч
+  activePlayer = 0;
+  // Тоглогчдийн цуглуулсан оноог хадгалах хувьсагч
+  scores = [0, 0];
+  // Тоглогчийн ээлжиндээ цуглуулж байгаа оноог хадгалах хувьсагч
+  currentScore = 0;
+
+  // id gaar elementiig ni oloh
+  document.getElementById("");
+  // queryselector  ni domoos ynzburiin select nukhtsuliig huleej avch tootsoolol hiideg
+
+  // document.getElementById("#score--0").textContent = 0;
+  // id geer haij baiga bol # tavih shaardlaga baihgui
+  document.querySelector("#score--0").textContent = 0;
+  document.querySelector("#score--1").textContent = 0;
+
+  document.querySelector("#current--1").textContent = 0;
+  document.querySelector("#current--0").textContent = 0;
+
+  // тоглогчийн нэрийг буцааж гаргах
+  document.getElementById("name--" + activePlayer).textContent = "Player 1";
+  document.getElementById("name--" + activePlayer).textContent = "Player 2";
+
+  document
+    .querySelector(".player--" + activePlayer)
+    .classList.remove("player--winner");
+}
+
 document
   .querySelector(".btn--roll")
   //   шоог шидэх эвент листенер
@@ -95,5 +111,9 @@ function switchNExtPlayer() {
 
   DiceDom.style.display = "none";
 }
+
+// new game буюу шинээр эхлүүлэх
+document.querySelector(".btn--new").addEventListener("click", init);
+
 // document.querySelector("#score--1").innerHTML = "<em>YES</em>";
 // document.querySelector("#score--1").innerHTML = "YES";
