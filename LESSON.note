@@ -1,4 +1,18 @@
 41. DOM
+// mdn javascript events
+// тухайн кодийг  copy paste хийж байвал  тэр кодийг сайжруулах боломжтой гэсэн үг
 42. Эвент гэж юу вэ? CallBack,anonymus функцууд
+
+// Шооны аль талаараа буусныг хадгалах хувьсагч хэрэгтэй,
+//  1-6 гэсэн утгыг энэ хувьсагчид санамсаргүйгээр үүсгэж өгнө.
+// var dice = Math.ceil(Math.random() * 6);
+
 43. Тоглогчийн ээлжийг солих
        commit -m "odoo tsag deer "bichsen" bish 'bichih' "
+       class olon baij bolno "sfe sefwf errfrwef geh met"
+
+       class bol ".player--1"  tsegtei 
+
+44. Цуглуулсан оноогоо авах хэсгийг хийх
+              DRY зарчим ашиглах
+              
