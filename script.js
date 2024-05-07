@@ -44,23 +44,56 @@ document
     } else {
       // 1 буусан тул тоглогчийн ээлжийн хэсгийг энэ хэсэгт сольж өгнө.
       //  энэ тоглогчийн ээлжиндээ цуглуулсан оноог 0 болгох
-      currentScore = 0;
-      document.getElementById("current--" + activePlayer).textContent = 0;
-      activePlayer === 0 ? (activePlayer = 1) : (activePlayer = 0);
-
-      //   document.querySelector(".player--0").classList.remove("player--active");
-      //   document.querySelector(".player--1").classList.add("player--active");
-
-      //байх юм бол устгадаг байхгүй бол нэмдэг - toggle
-      document.querySelector(".player--0").classList.toggle("player--active");
-      document.querySelector(".player--1").classList.toggle("player--active");
-
-      DiceDom.style.display = "none";
+      switchNExtPlayer();
     }
     console.log("Шидлээ: " + dice);
   });
 
+//   hold btn ii event listener
+document.querySelector(".btn--hold").addEventListener("click", function () {
+  //   Уг тоглогчийн ээлжийн оноог глобаль оноон дээр  нь нэмж өгнө
+  //   if (activePlayer == 0) {
+  //     scores[0] = scores[0] + currentScore;
+  //   } else {
+  //     scores[1] = scores[1] + currentScore;
+  //   }
+
+  scores[activePlayer] = scores[activePlayer] + currentScore;
+  document.getElementById("score--" + activePlayer).textContent =
+    scores[activePlayer];
+  // logiciin huvid ene ni if iin umnu baival zugeer onoogoo nemeh --> onoogoo haruulah --> nuhtsul tavih
+  //   уг тоглогч хожсон эсэхийг шалгах
+  if (scores[activePlayer] >= 1) {
+    // Ялагч гэсэн текстийг нэрнийх нь оронд гаргана
+    document.getElementById("name--" + activePlayer).textContent = "WINNER!!!";
+    document
+      .querySelector(".player--" + activePlayer)
+      .classList.add("player--winner");
+    // player--winner
+  } else {
+    switchNExtPlayer();
+  }
+
+  //   Дэлгцэндээ р оноог нь өөрчлөх
+
+  // Тоглогчийн ээлжийг солих
+
+  switchNExtPlayer();
+});
+
+function switchNExtPlayer() {
+  currentScore = 0;
+  document.getElementById("current--" + activePlayer).textContent = 0;
+  activePlayer === 0 ? (activePlayer = 1) : (activePlayer = 0);
+
+  //   document.querySelector(".player--0").classList.remove("player--active");
+  //   document.querySelector(".player--1").classList.add("player--active");
+
+  //байх юм бол устгадаг байхгүй бол нэмдэг - toggle
+  document.querySelector(".player--0").classList.toggle("player--active");
+  document.querySelector(".player--1").classList.toggle("player--active");
+
+  DiceDom.style.display = "none";
+}
 // document.querySelector("#score--1").innerHTML = "<em>YES</em>";
 // document.querySelector("#score--1").innerHTML = "YES";
-
-console.log("hiiiiiiiiiii");
