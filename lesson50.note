@@ -1,0 +1,82 @@
+lesson 47
+Gihub дээр кодоо байрлуулах
+веө сайтаа онлайн болгох, gihub хэрэлэгчийн тохиргоо,github эрх
+git log
+git commit am ""
+lesson 48
+
+
+
+$ ssh-keygen -t rsa -b 4096 -C "budka0322@gmail.com.com"
+Generating public/private rsa key pair.
+
+
+Admin@DESKTOP-S4QFRJ0 MINGW64 ~/Desktop/Projects/JS/LESSON(41-)_Dice_game (master)
+$ ssh-keygen -t rsa -b 4096 -C "budka0322@gmail.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/Admin/.ssh/id_rsa): /c/Users/Admin/.ssh/id_rsa
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/Admin/.ssh/id_rsa
+Your public key has been saved in /c/Users/Admin/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:JwuXB7SPlEd0fXzDueB0fz1XXmXQcnLs1Pczu+hn+Hs budka0322@gmail.com
+The key's randomart image is:
++---[RSA 4096]----+
+|        ..o ..o=*|
+|       . + . o+*#|
+|        = . o oX@|
+|       . *   . =O|
+|      . S +     B|
+|       o =     . |
+|        .     o .|
+|             o +E|
+|            ..+oo|
++----[SHA256]-----+
+
+Admin@DESKTOP-S4QFRJ0 MINGW64 ~/Desktop/Projects/JS/LESSON(41-)_Dice_game (master)
+$ ls -al ~/.ssh
+total 25
+drwxr-xr-x 1 Admin 197121    0 May  8 10:12 ./
+drwxr-xr-x 1 Admin 197121    0 May  8 10:02 ../
+-rw-r--r-- 1 Admin 197121 3389 May  8 10:12 id_rsa
+-rw-r--r-- 1 Admin 197121  745 May  8 10:12 id_rsa.pub
+-rw-r--r-- 1 Admin 197121   92 May  8 10:02 known_hosts
+
+Admin@DESKTOP-S4QFRJ0 MINGW64 ~/Desktop/Projects/JS/LESSON(41-)_Dice_game (master)
+$ ^C
+
+Admin@DESKTOP-S4QFRJ0 MINGW64 ~/Desktop/Projects/JS/LESSON(41-)_Dice_game (master)
+$ cat ~/.ssh/id_rsa.pub
+
+
+
+
+_________________________________________________________________________________________________
+$ cat ~/.ssh/id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCck+CNdrqkhebOD7odSmBJ/ImJu6X50xqj+VTxXvuDCimSjLKfYEResWU5ZMi3rCwGAgqcdtJzz/eo5MsJmtRshOrC3i6wqn7+IpiRCoITFEnyCWX08BcSVuhMvik8nkCsOV9g1QOlBrwDnBNh8kQVPzqy61dbCQOWzuIFe0hE8oXcLObDMHRWaWb9WknPC0Dl1DVmIsL62jqP/oecHRlISR9I7Ez1WOAEr/67X+LxItL+2TibyNXffBQOZ/+QOJPsHI2AmOQN4vETZu0zHw16g/BN99odYlZjtFNGgNZCK1IaeIk3+OuSfZwlS0wvgLxiZIy5N+5fBOTCHN9TFjD+GgS81/mSQQuQHiB2fruYJuHWzNf1Lt0yhm50/1goGnSdR4KUm3xJUgas/Is6EFAnsuUanLDetXaOeVFNEszHHdQJpDQiBSUrmiILkGV3gzon6V8b8E2wAoii4Pyj2lIVPx8J4bNCtjjEr1TZ49ujExSnzB1UPQDb1wE1Wten7hizpLjJydv+Ur/F1o3nEx2WCR+9/VxPTsookYAkKY/WpTV/lkTchPal5NCDzXIgrZEErgE6bm+BBCMji4Qd+brL99sio8N8Qtom7utrlVd1L7w9+kIiUwEdWyfqDQxzOKqgogQWB4Oalyf1Q7l/M7Vy0fjq2UyENW2cv3y75HqcKQ== budka0322@gmail.com
+
+
+
+________________________________________________________________________________
+$ git push origin master
+Enumerating objects: 41, done.
+Counting objects: 100% (41/41), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (41/41), done.
+Writing objects: 100% (41/41), 1.10 MiB | 3.00 MiB/s, done.
+Total 41 (delta 15), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (15/15), done.
+To github.com:BBudka/Dice-game.git
+ * [new branch]      master -> master
+
+
+LESSON 48 git push origin master
+git pull origin master
+
+LESSON 49 github аас төсөл татаж ажиллах
+
+LESSON 50  gitBranch ашиглах,  collaborator нэмэх
+Төслийн өөр хувилбар үүсгэх, үндсэн хувилбартай нэгтгэх
+Багаар ажиллах анхны алхам
+
